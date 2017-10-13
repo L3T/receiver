@@ -2,6 +2,7 @@
 import json
 
 import requests
+from django.http import JsonResponse
 
 
 def send_dingding(res):
@@ -22,6 +23,6 @@ def send_dingding(res):
 
 
 def webhook(request):
-    print(request.POST.__dict__)
     res = json.loads(request.body.decode())
     send_dingding(res)
+    return JsonResponse(data={})
