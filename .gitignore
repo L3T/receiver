@@ -1,0 +1,5 @@
+.idea/
+db.sqlite3
+receiver/__pycache__/
+webhook/__pycache__/
+webhook/migrations/__pycache__/
