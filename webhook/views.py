@@ -11,7 +11,7 @@ def send_dingding(res):
         "markdown": {
             "title": res.get('title', ''),
             "text": "#### {}\n".format(res.get('title', ''))+
-                    "\n".join(["- {}".format(json.dumps(match)) for match in res.get("evalMatches")]) +
+                    "\n".join(["- {}".format(match) for match in res.get("evalMatches")]) +
                     "\n> [view]({link}) \n".format(link=res.get("ruleUrl", ""))
         },
     }
